@@ -1,4 +1,4 @@
-﻿"use strict";
+"use strict";
 
 function parseCount(num) {
   const parsed = Number.parseFloat(num);
@@ -33,11 +33,11 @@ class Triangle {
   }
 
   get perimeter() {
-    return (this.p = this.a + this.b + this.c);
+    return this.a + this.b + this.c;
   }
 
   get area() {
-    const p = this.p / 2;
+    const p = (this.a + this.b + this.c) / 2;
     return Number(
       Math.sqrt(p * (p - this.a) * (p - this.b) * (p - this.c)).toFixed(3)
     );
