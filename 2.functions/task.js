@@ -53,15 +53,12 @@ function averageEvenElementsWorker(...arr) {
   let sumEvenElement = 0; // сумма четных
   let countEvenElement = 0; // колличество четных
 
-  if (arr.length == 0) {
-    // условие на проверку наличия элементов в массиве
-    return 0;
-  }
-
   for (let i = 0; i <= arr.length; i += 1) {
     if (arr[i] % 2 == 0) {
       sumEvenElement += arr[i];
       countEvenElement += 1;
+    } else if (arr.length == 0) {
+      return 0;
     }
   }
 
